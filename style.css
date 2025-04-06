@@ -55,7 +55,6 @@ label {
     cursor: pointer;
     background: white;
     border-radius: 5px;
-    transition: 0.3s ease;
 }
 
 label:hover {
@@ -74,7 +73,6 @@ input[type="submit"] {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s ease;
 }
 
 input[type="submit"]:hover {

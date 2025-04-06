@@ -18,7 +18,7 @@
        <div class="container">
         <h1>Game Gedrag Test</h1>
         <p> <strong>welkom en bedankt voor het nemen van de vragenlisjt!</strong> </p>
-        <form action="resultaat.php" method="POST">
+        <form action="resultaten.php" method="POST">
             <hr>
             <div class="vraag">
                 <p>1. Hoe vaak speel je videogames?</p>
