@@ -1,89 +1,94 @@
+/* Algemene body-instellingen */
 body {
     font-family: "Georgia", "Times New Roman", serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #f4f4f4; /* Achtergrondkleur van de pagina */
+    text-align: center; /* Centraal uitlijnen van tekst */
 }
 
+/* Headerstijl */
 header {
-    background-color: #784fd8;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
+    background-color: #784fd8; /* Paarse achtergrond */
+    color: white; /* Witte tekst */
+    padding: 20px; /* Padding rondom de header */
+    font-size: 24px; /* Grootte van de headertekst */
 }
 
+/* Stijl voor de contentbox */
 .content-box {
-    background: #d6d5d5;
+    background: #d6d5d5; /* Lichte grijze achtergrond */
     padding: 30px;
     margin: 60px auto;
-    width: 60%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Breedte van de contentbox */
+    border-radius: 10px; /* Afgeronde hoeken */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte-effect */
 }
 
+/* Stijlen voor de test-link */
 .test-link {
     display: inline-block;
     margin-top: 20px;
-    color: #007bff;
+    color: #007bff; /* Blauwe kleur voor de link */
     text-decoration: none;
     font-weight: bold;
 }
 
 .test-link:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Onderstreping bij hover */
 }
 
+/* Footerstijl */
 footer {
-    background: #afafaf;
-    text-align: center;
+    background: #afafaf; /* Grijze achtergrond */
+    text-align: center; /* Centraal uitlijnen van tekst */
     padding: 20px;
-    position: fixed;
+    position: fixed; /* Fixed positie onderaan de pagina */
     bottom: 0;
-    width: 100%;
+    width: 100%; /* Volledige breedte */
 }
 
-/* Toegevoegde stijlen voor de quiz */
+/* Stijlen voor de quizvragen */
 .vraag {
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 20px; /* Ruimte tussen de vragen */
+    text-align: left; /* Vragen links uitlijnen */
 }
 
 label {
     display: block;
     padding: 8px;
-    cursor: pointer;
+    cursor: pointer; /* Cursor verandert bij hover */
     background: white;
-    border-radius: 5px;
+    border-radius: 5px; /* Afgeronde hoeken voor de labels */
 }
 
 label:hover {
-    background: #e0e0e0;
+    background: #e0e0e0; /* Achtergrondkleur verandert bij hover */
 }
 
 input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Ruimte tussen radio button en tekst */
 }
 
 input[type="submit"] {
-    background-color: #784fd8;
-    color: white;
+    background-color: #784fd8; /* Paarse achtergrond voor de submit button */
+    color: white; /* Witte tekst */
     border: none;
     padding: 12px 20px;
     font-size: 18px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Cursor verandert naar pointer */
 }
 
 input[type="submit"]:hover {
-    background-color: #5e3ab6;
+    background-color: #5e3ab6; /* Donkerdere paarse kleur bij hover */
 }
 
-/* Stijl voor de resultaatpagina */
+/* Stijlen voor de resultaatpagina */
 .resultaat {
     font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
+    font-weight: bold; /* Vetgedrukte tekst */
+    margin-top: 20px; /* Ruimte boven het resultaat */
 }
 
 .resultaat p {
@@ -94,34 +99,53 @@ input[type="submit"]:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 15px;
-    background: #007bff;
-    color: white;
+    background: #007bff; /* Blauwe achtergrond voor de link */
+    color: white; /* Witte tekst */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Afgeronde hoeken voor de knop */
 }
 
 .resultaat a:hover {
-    background: #0056b3;
+    background: #0056b3; /* Donkerdere blauwe kleur bij hover */
 }
 
-
-
-
-
-.flex_header
-{
+/* Flexbox instellingen voor de header */
+.flex_header {
     display: flex;
-    justify-content:center;
+    justify-content: center; /* Center de items horizontaal */
 }
 
-.flex_header2
-{
+/* Flexbox instellingen voor de tweede headersectie */
+.flex_header2 {
     display: flex;
-    justify-content:flex-start;
-    
+    justify-content: flex-start; /* Links uitlijnen */
 }
 
-.tijd
-{
-    text-align: left;
+.tijd {
+    text-align: left; /* Tijd wordt links uitgelijnd */
+}
+
+/* Navigatiemenu */
+.menu {
+    padding: 0px;
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /* Verspreid de menu-items gelijkmatig */
+    border-bottom: black 1px solid; /* Zwarte lijn onder het menu */
+}
+
+.menu_li {
+    display: inline;
+    padding: 2px; /* Kleine padding voor de lijstitems */
+}
+
+.menu_link {
+    color: #5e3ab6; /* Blauwe kleur voor de menu links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu_link:hover {
+    text-decoration: underline; /* Onderstreping bij hover */
 }
