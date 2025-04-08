@@ -31,8 +31,13 @@ $tijd = date_format($vandaag,"Y-m-d, H:i");
                     datum($vandaag, $tijd);
                     ?>
                 </artikel>
+                <br>
+                
+                <div id="welcome"> </div>
             </div>
         </header>
+
+
     <main>
        <div class="content-box">
        <div class="container">
@@ -168,6 +173,8 @@ $tijd = date_format($vandaag,"Y-m-d, H:i");
     </main>
 
     <?php include 'footer.php'; ?>
+
+   
 
 </body>
 </html>

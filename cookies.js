@@ -14,12 +14,13 @@ window.onload = () => {
     let username = getCookie('username');
 
     if (username) {
-        document.getElementById('welcome').innerText = `Welkom, ${username}! Fijn dat je onze website bezoekt.`;
+        document.getElementById('welcome').innerText = ` , ${username}! Fijn dat je onze website bezoekt.`;
     } else {
-        username = prompt("Welkom! Wat is je naam?");
+        username = prompt(" Welkom! Wat is je naam?");
         if (username) {
             setCookie('username', username, 365);
-            document.getElementById('welcome').innerText = `Welkom, ${username}! Fijn dat je onze website bezoekt.`;
+            document.getElementById('welcome').innerText = ` , ${username}! Fijn dat je onze website bezoekt.`;
         }
     }
+    
 };

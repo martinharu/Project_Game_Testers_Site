@@ -1,7 +1,7 @@
 <?php
 include "functions.php";
 $vandaag = new dateTime();
-$tijd = date_format($vandaag,"Y-m-d, H:i");
+$tijd = date_format($vandaag,"Y-m-d, H:i ");
 ?>
 
 
@@ -28,10 +28,12 @@ $tijd = date_format($vandaag,"Y-m-d, H:i");
                     datum($vandaag, $tijd);
                     ?>
                 </artikel>
+                <br>
+                
+                <div id="welcome"> </div>
             </div>
         </header>
 
-    <div id="welcome"></div>
 
     <main>
         <div class="content-box">
