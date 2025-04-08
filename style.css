@@ -103,3 +103,25 @@ input[type="submit"]:hover {
 .resultaat a:hover {
     background: #0056b3;
 }
+
+
+
+
+
+.flex_header
+{
+    display: flex;
+    justify-content:center;
+}
+
+.flex_header2
+{
+    display: flex;
+    justify-content:flex-start;
+    
+}
+
+.tijd
+{
+    text-align: left;
+}

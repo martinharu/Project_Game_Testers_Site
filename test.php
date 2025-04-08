@@ -1,3 +1,12 @@
+<?php
+
+include "functions.php";
+$vandaag = new dateTime();
+$tijd = date_format($vandaag,"Y-m-d, H:i");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -9,10 +18,21 @@
 
 <body>
 
-    <header>
-        <h1>Game testers</h1>
-    </header>
-
+<header>
+            <div class="flex_header">
+                <artikel class='titel'>
+                    <h1>Game testers</h1>
+                </artikel>
+            </div>
+            
+            <div class="flex_header2">
+                <artikel class="tijd">
+                    <?php
+                    datum($vandaag, $tijd);
+                    ?>
+                </artikel>
+            </div>
+        </header>
     <main>
        <div class="content-box">
        <div class="container">
