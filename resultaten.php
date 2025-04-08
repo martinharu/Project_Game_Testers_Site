@@ -69,15 +69,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // fotos uitslag
     if ($score <= 4) {
-        echo "<img 
-        src='images/happyemoji.png' alt='foto emoji happy' width='200px' height='200px'>";
+        echo "<img src='images/happyemoji.png' alt='foto emoji happy' width='200px' height='200px'>";
     } elseif ($score <= 8) {
         echo "<img src='images/thumbs_up.jpg' alt='foto emoji happy' width='200px' height='200px'>";
     } elseif ($score <= 12) {
-        echo "<img src='images/worried.png alt='foto emoji happy' width='200px' height='200px'>";
+        echo "<img src='images/worried.png' alt='foto emoji happy' width='200px' height='200px'>";
 
     } else {
-        echo "<img src='images/goku_is_mad.jpg alt='foto emoji happy' width='200px' height='200px'>";
+        echo "<img src='images/goku_is_mad.jpg' alt='foto emoji happy' width='250px' height='250px'>";
     }
 }
 ?>
