@@ -71,17 +71,14 @@ $tijd = date_format($vandaag, "Y-m-d, H:i ");
         // Als er een eerdere score/resultaat is, toon dit op de pagina
         const resultaatDiv = document.createElement("div");
         resultaatDiv.innerHTML = `
-            <h2>Je vorige score: ${opgeslagenScore}</h2>
+            <h2>Je vorige score:</h2>
             ${opgeslagenResultaat}
         `;
         document.body.appendChild(resultaatDiv); // Voeg resultaat toe aan body
     }
 </script>
 
-<!-- Knop om eerdere resultaten uit localStorage te wissen -->
-<button onclick="localStorage.removeItem('laatsteScore'); localStorage.removeItem('laatsteResultaat'); location.reload();">
-    Verwijder oude resultaten
-</button>
+
 
 </body>
 </html>

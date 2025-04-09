@@ -24,7 +24,7 @@ window.onload = () => {
         username = prompt("Welkom! Wat is je naam?");
         if (username) {
             setCookie('username', username, 365); // Sla naam op in cookie voor 1 jaar
-            document.getElementById('welcome').innerText = ` , ${username}! Fijn dat je onze website bezoekt.`;
+            document.getElementById('welcome').innerText = ', ' + username + '! Fijn dat je onze website bezoekt.';
         }
     }
 };

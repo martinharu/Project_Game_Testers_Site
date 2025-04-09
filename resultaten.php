@@ -94,6 +94,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     ?>
+    
+    <!-- Huidig resultaat -->
     <div class="content-box">
         <div class="container">
             <h2>Resultaat</h2>
@@ -101,14 +103,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><a href="test.php">Doe de test opnieuw</a></p>
         </div>
     </div>
+
+    <!-- Vorige resultaten -->
+    <div class="content-box">
+        <h2>Vorige resultaten</h2>
+        <div id="oudeResultaten"></div>
+    </div>
+
+    <!-- Knop om alle oude resultaten te verwijderen -->
+    <div class="content-box">
+        <button id="verwijderResultaten">Verwijder alle oude resultaten</button>
+    </div>
+
 </main>
 
 <?php include 'footer.php'; ?> <!-- Footer include -->
 
 <script>
-    // Sla score en resultaat op in localStorage (zodat ze op andere pagina getoond kunnen worden)
-    localStorage.setItem("laatsteScore", "<?php echo $score; ?>");
-    localStorage.setItem("laatsteResultaat", <?php echo json_encode($resultaat); ?>);
+    // Haal de lijst met resultaten uit localStorage (of maak een lege lijst als deze niet bestaat)
+    const resultatenDiv = document.getElementById("oudeResultaten");
+    const resultatenLijst = JSON.parse(localStorage.getItem("resultatenLijst")) || [];
+
+    if (resultatenLijst.length > 0) {
+        // Loop door alle resultaten en toon ze
+        resultatenLijst.forEach((item) => {
+            const blok = document.createElement("div");
+            blok.className = "resultaat-blok";
+            blok.innerHTML = `
+                <strong>Datum:</strong> ${item.datum}<br>
+                <strong>Score:</strong> ${item.score}<br>
+                ${item.resultaat}
+                <hr>
+            `;
+            resultatenDiv.appendChild(blok);
+        });
+    } else {
+        resultatenDiv.innerHTML = "<p>Geen eerdere resultaten gevonden.</p>";
+    }
+
+    // Sla de huidige score en resultaat op in localStorage
+    const huidigeResultaat = {
+        datum: "<?php echo $tijd; ?>",  // De datum en tijd
+        score: "<?php echo $score; ?>",  // De score van de test
+        resultaat: <?php echo json_encode($resultaat); ?>  // Het resultaat
+    };
+
+    // Voeg het huidige resultaat toe aan de lijst in localStorage
+    resultatenLijst.push(huidigeResultaat);
+    localStorage.setItem("resultatenLijst", JSON.stringify(resultatenLijst));
+
+    // Event listener voor de "Verwijder alle oude resultaten"-knop
+    document.getElementById('verwijderResultaten').addEventListener('click', function() {
+        // Wis de lijst met resultaten uit localStorage
+        localStorage.removeItem('resultatenLijst');
+        
+        // Laad de pagina opnieuw om de lijst te wissen
+        location.reload();
+    });
 </script>
 
 </body>
