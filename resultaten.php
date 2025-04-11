@@ -21,11 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bepaal het resultaat op basis van de behaalde score
-    if ($score <= 4) {
+    if ($score <= 10) {
         $resultaat = "<h2>Uitslag is $score punten : Casual Gamer, Je gamet af en toe en hebt een goede balans. Geen zorgen!</h2>";
-    } elseif ($score <= 8) {
+    } elseif ($score <= 18) {
         $resultaat = "<h2>Uitslag is $score punten : Enthousiaste Gamer, Je houdt van gamen en speelt regelmatig, maar let op dat het geen invloed krijgt op andere belangrijke zaken.</h2>";
-    } elseif ($score <= 12) {
+    } elseif ($score <= 24) {
         $resultaat = "<h2>Uitslag is $score punten : Problematische Gamer, Gamen neemt een grote rol in je leven in. Het kan invloed hebben op je gezondheid, sociale leven of prestaties. Tijd om bewust te minderen!</h2>";
     } else {
         $resultaat = "<h2>Uitslag is $score punten : Verslavingsgevaar! Gamen beheerst je leven en heeft waarschijnlijk negatieve gevolgen. Overweeg hulp of stel grenzen voor jezelf!</h2>";
@@ -83,11 +83,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Toon bijpassende afbeelding op basis van score
-        if ($score <= 4) {
+        if ($score <= 10) {
             echo "<img src='images/happyemoji.png' alt='foto emoji happy' width='200px' height='200px'>";
-        } elseif ($score <= 8) {
+        } elseif ($score <= 18) {
             echo "<img src='images/thumbs_up.jpg' alt='foto emoji happy' width='200px' height='200px'>";
-        } elseif ($score <= 12) {
+        } elseif ($score <= 24) {
             echo "<img src='images/worried.png' alt='foto emoji happy' width='200px' height='200px'>";
         } else {
             echo "<img src='images/goku_is_mad.jpg' alt='foto emoji happy' width='250px' height='250px'>";
@@ -131,7 +131,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             blok.className = "resultaat-blok";
             blok.innerHTML = `
                 <strong>Datum:</strong> ${item.datum}<br>
-                <strong>Score:</strong> ${item.score}<br>
                 ${item.resultaat}
                 <hr>
             `;
@@ -144,7 +143,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sla de huidige score en resultaat op in localStorage
     const huidigeResultaat = {
         datum: "<?php echo $tijd; ?>",  // De datum en tijd
-        score: "<?php echo $score; ?>",  // De score van de test
         resultaat: <?php echo json_encode($resultaat); ?>  // Het resultaat
     };
 
